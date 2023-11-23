@@ -31,6 +31,10 @@ function pridejZamestnanace(firma){
     const zamestnanec = new Zamestnanec(jmeno, vek, pozice);
     firma.zamestnanci.push(zamestnanec);
     vytvorenSeznam = true
+    ulozZamestnance = JSON.stringify(firma.zamestnanci)
+    localStorage.setItem("zamestnanci", ulozZamestnance)
+    ulozFirmu = JSON.stringify(firma)
+    localStorage.setItem("firma", ulozFirmu)
 }
 
 function vypisZamestnance(firma){
@@ -41,6 +45,7 @@ function vypisZamestnance(firma){
         seznam.innerHTML += `<li>Jméno: ${zamestnanec.jmeno}</li>`;
         seznam.innerHTML += `<li>Věk: ${zamestnanec.vek}</li>`;
         seznam.innerHTML += `<li>Pozice: ${zamestnanec.pozice}</li>`;
+        
     }
     document.body.appendChild(seznam);
 }
