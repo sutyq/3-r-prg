@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Školní aplikace</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<h1>Školní aplikace</h1>
+
+<form id="hlavniFormular">
+  <label for="vstup">Zadej příkaz a parametry (oddělené mezerou):</label>
+  <input type="text" id="vstup" name="vstup" placeholder="např. vypsat">
+  <button type="button" onclick="zpracujPrikaz()">Odeslat</button>
+</form>
+
+<a>Přikazy: vypsat, pridat, prumer[ID sudenta], prumerVek</a>
+
+<div id="vystup"></div>
+
+<script src="obsluha.js"></script>
+</body>
+</html>
+
