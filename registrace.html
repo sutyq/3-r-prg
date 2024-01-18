@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <script src="registration.js" defer></script>
+    <title>Registrace uživatele</title>
+</head>
+<body>
+    <header>
+        <h1>Registrace uživatele</h1>
+    </header>
+
+    <form id="registration-form">
+        
+        <label for="jmeno">Jméno:</label>
+        <input type="text" id="jmeno" name="jmeno" required>
+
+        <label for="prijmeni">Příjmení:</label>
+        <input type="text" id="prijmeni" name="prijmeni" required>
+
+        <label for="uzivatelske-jmeno">Uživatelské jméno:</label>
+        <input type="text" id="uzivatelske-jmeno" name="uzivatelske-jmeno" required>
+
+        <label for="heslo">Heslo:</label>
+        <input type="password" id="heslo" name="heslo" required>
+
+        <label for="vek">Věk:</label>
+        <input type="number" id="vek" name="vek" required>
+
+        <label for="pohlavi">Pohlaví:</label>
+        <select id="pohlavi" name="pohlavi" required>
+            <option value="muz">Muž</option>
+            <option value="zena">Žena</option>
+        </select>
+
+        <label for="status">Status uživatele:</label>
+        <select id="status" name="status" required>
+            <option value="aktivni">Aktivní</option>
+            <option value="neaktivni">Neaktivní</option>
+        </select>
+
+        <button type="button" onclick="registrovat()">Registrovat</button>
+    </form>
+</body>
+</html>
