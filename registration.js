@@ -1,5 +1,4 @@
 function registrovat() {
-    
     var jmeno = document.getElementById('jmeno').value;
     var prijmeni = document.getElementById('prijmeni').value;
     var uzivatelskeJmeno = document.getElementById('uzivatelske-jmeno').value;
@@ -9,8 +8,11 @@ function registrovat() {
     var status = document.getElementById('status').value;
 
     
+    if (!jmeno || !prijmeni || !uzivatelskeJmeno || !heslo || !vek || !pohlavi || !status) {
+        alert('Vyplňte všechna povinná pole.');
+        return;
+    }
 
-    
     var uzivatel = {
         jmeno: jmeno,
         prijmeni: prijmeni,
@@ -20,16 +22,12 @@ function registrovat() {
         pohlavi: pohlavi,
         status: status
     };
-
-    
+ 
     var uzivatele = JSON.parse(localStorage.getItem('uzivatele')) || [];
 
-    
     uzivatele.push(uzivatel);
 
-    
     localStorage.setItem('uzivatele', JSON.stringify(uzivatele));
 
-    
     alert('Uživatel byl úspěšně zaregistrován.');
 }
